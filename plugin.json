@@ -1,0 +1,25 @@
+{
+  "Id": "bf145a9f-4976-4486-a671-d44eb64c7cd0",
+  "TriggerKeywords": [
+    "*"
+  ],
+  "Name": "Wox.Plugin.Selection.Sum",
+  "Description": "Sum selected numbers",
+  "Author": "Wox-Launcher",
+  "Version": "0.0.1",
+  "MinWoxVersion": "2.0.0",
+  "Runtime": "nodejs",
+  "Website": "https://github.com/Wox-launcher/Wox.Plugin.Selection.Sum",
+  "Entry": "index.js",
+  "Icon": "relative:images/app.png",
+  "SupportedOS": [
+    "windows",
+    "linux",
+    "darwin"
+  ],
+  "Features": [
+    {
+      "name": "querySelection"
+    }
+  ]
+}
