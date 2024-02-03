@@ -1,3 +1,5 @@
-# Wox.Plugin.Template.Nodejs
+# Wox.Plugin.Selection.Sum
 
-Plugin template for nodejs plugin
+Sum selected numbers and copy result to clipboard.
+
+![snipaste](assets/snipaste.png)
