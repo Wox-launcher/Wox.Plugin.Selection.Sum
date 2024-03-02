@@ -6,7 +6,7 @@
   "Name": "Wox.Plugin.Selection.Sum",
   "Description": "Sum selected numbers",
   "Author": "Wox-Launcher",
-  "Version": "0.0.1",
+  "Version": "0.0.2",
   "MinWoxVersion": "2.0.0",
   "Runtime": "nodejs",
   "Website": "https://github.com/Wox-launcher/Wox.Plugin.Selection.Sum",

@@ -1,15 +1,15 @@
-import type { Plugin, PluginInitContext, PublicAPI, Query, Result } from "@wox-launcher/wox-plugin"
+import type { Context, Plugin, PluginInitParams, PublicAPI, Query, Result } from "@wox-launcher/wox-plugin"
 import clipboard from "clipboardy"
 
 let api: PublicAPI
 
 export const plugin: Plugin = {
-  init: async (context: PluginInitContext) => {
-    api = context.API
+  init: async (ctx: Context, initParams: PluginInitParams) => {
+    api = initParams.API
   },
 
-  query: async (query: Query): Promise<Result[]> => {
-    await api.Log("Info", `sum: ${query.RawQuery}`)
+  query: async (ctx: Context, query: Query): Promise<Result[]> => {
+    await api.Log(ctx, "Info", `sum: ${query.RawQuery}`)
 
     if (query.Type === "selection" && query.Selection.Type === "text") {
       for (const splitter of [" ", "\n", "\t", ","]) {
@@ -34,7 +34,7 @@ export const plugin: Plugin = {
                     tokens.forEach(token => {
                       sum += Number(token)
                     })
-                    await api.Notify("Copied Sum Result", sum.toString())
+                    await api.Notify(ctx, "Copied Sum Result", sum.toString())
                     await clipboard.write(sum.toString())
                   }
                 }
